@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  display: grid;
+  grid-template-columns: 40% 70%;
+  grid-template-rows: 40% 70%;
+  grid-template-areas:
+    "navigation main"
+    "navigation main";
+}
+#nav-container {
+  display: grid;
+  justify-content: space-between;
+  row-gap: 30px;
+}
+a {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+nav {
+  width: 100%;
+
+  flex-direction: row;
+  grid-area: navigation;
+}
+#main-doc {
+  grid-area: main;
+}
+html,
+body {
+  height: 100vh;
+}
+header {
+  font-weight: bolder;
+  font-size: 30px;
+}
+#code {
+  background: #efefef;
+  padding: 10px;
+}
+code {
+  padding: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 19px;
+  margin: 10px;
+}
+
+#title {
+  text-align: center;
+  padding: 10px;
+}
+
+@media (max-width: 480px) {
+  a:before {
+    content: "";
+    width: 98%;
+    height: 1px;
+    position: absolute;
+    left: 0px;
+    background-color: black;
+    display: block;
+  }
+  #nav-container {
+    display: grid;
+    width: 100%;
+    border-right: 1px solid black;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    top: 0px;
+    left: 0px;
+    background: #efefef;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-shadow: 1px 1px #efefef;
+  }
+}
